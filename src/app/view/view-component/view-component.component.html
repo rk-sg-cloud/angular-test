@@ -1,0 +1,16 @@
+<div>
+ Check post: <input type="number" [(ngModel)]="postId">
+ <button (click)="searchPost()">Search</button>
+ <p></p>
+ <div *ngIf="isPostIdAvailable">
+    <p>Post Id: {{response.data.id}}</p>
+    <p>User Id: {{response.data.user_id}}</p>
+    <p>Title: {{response.data.title}}</p>
+    <p>Post: {{response.data.body}}</p>
+    <p>CreatedOn: {{response.data.created_at}}</p>
+    <p>UpdatedOn: {{response.data.updated_at}}</p>           
+</div>
+</div>
+<p></p>
+<router-outlet></router-outlet>
+
